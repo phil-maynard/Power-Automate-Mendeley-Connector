@@ -1,0 +1,657 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Mendeley",
+    "description": "Mendeley API connector",
+    "version": "1.0"
+  },
+  "host": "api.mendeley.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/groups/v2": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "access_level": {
+                    "type": "string",
+                    "description": "access_level"
+                  },
+                  "created": {
+                    "type": "string",
+                    "description": "created"
+                  },
+                  "description": {
+                    "type": "string",
+                    "description": "description"
+                  },
+                  "disciplines": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "disciplines"
+                  },
+                  "id": {
+                    "type": "string",
+                    "description": "id"
+                  },
+                  "link": {
+                    "type": "string",
+                    "description": "link"
+                  },
+                  "member_count": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "member_count"
+                  },
+                  "member_limit": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "member_limit"
+                  },
+                  "name": {
+                    "type": "string",
+                    "description": "name"
+                  },
+                  "owning_profile_id": {
+                    "type": "string",
+                    "description": "owning_profile_id"
+                  },
+                  "pending_invitation_count": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "pending_invitation_count"
+                  },
+                  "photo": {
+                    "type": "object",
+                    "properties": {
+                      "original": {
+                        "type": "string",
+                        "description": "original"
+                      },
+                      "photo_uuid": {
+                        "type": "string",
+                        "description": "photo_uuid"
+                      },
+                      "square": {
+                        "type": "string",
+                        "description": "square"
+                      },
+                      "standard": {
+                        "type": "string",
+                        "description": "standard"
+                      }
+                    },
+                    "description": "photo"
+                  },
+                  "role": {
+                    "type": "string",
+                    "description": "role"
+                  },
+                  "tags": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "tags"
+                  },
+                  "url_slug": {
+                    "type": "string",
+                    "description": "url_slug"
+                  },
+                  "used_space": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "used_space"
+                  },
+                  "webpage": {
+                    "type": "string",
+                    "description": "webpage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Groups",
+        "description": "Get Groups",
+        "operationId": "GetGroups",
+        "parameters": [],
+        "x-ms-visibility": "advanced"
+      }
+    },
+    "/documents": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "abstract": {
+                    "type": "string",
+                    "description": "abstract"
+                  },
+                  "accessed": {
+                    "type": "string",
+                    "description": "accessed"
+                  },
+                  "authored": {
+                    "type": "boolean",
+                    "description": "authored"
+                  },
+                  "authors": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "first_name": {
+                          "type": "string",
+                          "description": "first_name"
+                        },
+                        "last_name": {
+                          "type": "string",
+                          "description": "last_name"
+                        },
+                        "scopus_author_id": {
+                          "type": "string",
+                          "description": "scopus_author_id"
+                        }
+                      }
+                    },
+                    "description": "authors"
+                  },
+                  "chapter": {
+                    "type": "string",
+                    "description": "chapter"
+                  },
+                  "citation_key": {
+                    "type": "string",
+                    "description": "citation_key"
+                  },
+                  "city": {
+                    "type": "string",
+                    "description": "city"
+                  },
+                  "code": {
+                    "type": "string",
+                    "description": "code"
+                  },
+                  "confirmed": {
+                    "type": "boolean",
+                    "description": "confirmed"
+                  },
+                  "country": {
+                    "type": "string",
+                    "description": "country"
+                  },
+                  "created": {
+                    "type": "string",
+                    "description": "created"
+                  },
+                  "day": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "day"
+                  },
+                  "department": {
+                    "type": "string",
+                    "description": "department"
+                  },
+                  "edition": {
+                    "type": "string",
+                    "description": "edition"
+                  },
+                  "editors": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "first_name": {
+                          "type": "string",
+                          "description": "first_name"
+                        },
+                        "last_name": {
+                          "type": "string",
+                          "description": "last_name"
+                        },
+                        "scopus_author_id": {
+                          "type": "string",
+                          "description": "scopus_author_id"
+                        }
+                      }
+                    },
+                    "description": "editors"
+                  },
+                  "file_attached": {
+                    "type": "boolean",
+                    "description": "file_attached"
+                  },
+                  "folder_uuids": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "leastSignificantBits": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "leastSignificantBits"
+                        },
+                        "mostSignificantBits": {
+                          "type": "integer",
+                          "format": "int32",
+                          "description": "mostSignificantBits"
+                        }
+                      }
+                    },
+                    "description": "folder_uuids"
+                  },
+                  "genre": {
+                    "type": "string",
+                    "description": "genre"
+                  },
+                  "group_id": {
+                    "type": "string",
+                    "description": "group_id"
+                  },
+                  "hidden": {
+                    "type": "boolean",
+                    "description": "hidden"
+                  },
+                  "id": {
+                    "type": "string",
+                    "description": "id"
+                  },
+                  "identifiers": {
+                    "type": "string",
+                    "description": "identifiers"
+                  },
+                  "institution": {
+                    "type": "string",
+                    "description": "institution"
+                  },
+                  "issue": {
+                    "type": "string",
+                    "description": "issue"
+                  },
+                  "keywords": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "keywords"
+                  },
+                  "language": {
+                    "type": "string",
+                    "description": "language"
+                  },
+                  "last_modified": {
+                    "type": "string",
+                    "description": "last_modified"
+                  },
+                  "medium": {
+                    "type": "string",
+                    "description": "medium"
+                  },
+                  "month": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "month"
+                  },
+                  "notes": {
+                    "type": "string",
+                    "description": "notes"
+                  },
+                  "pages": {
+                    "type": "string",
+                    "description": "pages"
+                  },
+                  "patent_application_number": {
+                    "type": "string",
+                    "description": "patent_application_number"
+                  },
+                  "patent_legal_status": {
+                    "type": "string",
+                    "description": "patent_legal_status"
+                  },
+                  "patent_owner": {
+                    "type": "string",
+                    "description": "patent_owner"
+                  },
+                  "private_publication": {
+                    "type": "boolean",
+                    "description": "private_publication"
+                  },
+                  "profile_id": {
+                    "type": "string",
+                    "description": "profile_id"
+                  },
+                  "publisher": {
+                    "type": "string",
+                    "description": "publisher"
+                  },
+                  "read": {
+                    "type": "boolean",
+                    "description": "read"
+                  },
+                  "reprint_edition": {
+                    "type": "string",
+                    "description": "reprint_edition"
+                  },
+                  "revision": {
+                    "type": "string",
+                    "description": "revision"
+                  },
+                  "series": {
+                    "type": "string",
+                    "description": "series"
+                  },
+                  "series_editor": {
+                    "type": "string",
+                    "description": "series_editor"
+                  },
+                  "series_number": {
+                    "type": "string",
+                    "description": "series_number"
+                  },
+                  "short_title": {
+                    "type": "string",
+                    "description": "short_title"
+                  },
+                  "source": {
+                    "type": "string",
+                    "description": "source"
+                  },
+                  "source_type": {
+                    "type": "string",
+                    "description": "source_type"
+                  },
+                  "starred": {
+                    "type": "boolean",
+                    "description": "starred"
+                  },
+                  "tags": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "tags"
+                  },
+                  "title": {
+                    "type": "string",
+                    "description": "title"
+                  },
+                  "translators": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "first_name": {
+                          "type": "string",
+                          "description": "first_name"
+                        },
+                        "last_name": {
+                          "type": "string",
+                          "description": "last_name"
+                        },
+                        "scopus_author_id": {
+                          "type": "string",
+                          "description": "scopus_author_id"
+                        }
+                      }
+                    },
+                    "description": "translators"
+                  },
+                  "type": {
+                    "type": "string",
+                    "description": "type"
+                  },
+                  "user_context": {
+                    "type": "string",
+                    "description": "user_context"
+                  },
+                  "volume": {
+                    "type": "string",
+                    "description": "volume"
+                  },
+                  "websites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "websites"
+                  },
+                  "year": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "year"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Documents",
+        "description": "Get Documents",
+        "operationId": "GetDocuments",
+        "x-ms-visibility": "advanced",
+        "parameters": [
+          {
+            "name": "folder_id",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "important",
+            "description": "Return documents from a specific folder",
+            "x-ms-summary": "Folder ID"
+          },
+          {
+            "name": "group_id",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "description": "Group ID",
+            "x-ms-summary": "Group ID",
+            "x-ms-visibility": "important"
+          },
+          {
+            "name": "starred",
+            "in": "query",
+            "required": false,
+            "type": "boolean",
+            "x-ms-visibility": "important",
+            "description": "Return started documents",
+            "x-ms-summary": "Starred documents"
+          },
+          {
+            "name": "tag",
+            "in": "query",
+            "required": false,
+            "type": "array",
+            "x-ms-visibility": "advanced",
+            "description": "Returns documents with at least one of the given tags",
+            "x-ms-summary": "Tag"
+          }
+        ]
+      }
+    },
+    "/files": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "catalog_id": {
+                    "type": "string",
+                    "description": "catalog_id"
+                  },
+                  "created": {
+                    "type": "string",
+                    "description": "created"
+                  },
+                  "document_id": {
+                    "type": "string",
+                    "description": "document_id"
+                  },
+                  "file_name": {
+                    "type": "string",
+                    "description": "file_name"
+                  },
+                  "filehash": {
+                    "type": "string",
+                    "description": "filehash"
+                  },
+                  "id": {
+                    "type": "string",
+                    "description": "id"
+                  },
+                  "mime_type": {
+                    "type": "string",
+                    "description": "mime_type"
+                  },
+                  "size": {
+                    "type": "integer",
+                    "format": "int32",
+                    "description": "size"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get Files",
+        "operationId": "GetFiles",
+        "description": "Get files from logged in user or specific group",
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "important",
+            "x-ms-summary": "Document ID",
+            "description": "ID of document you want to return files for"
+          },
+          {
+            "name": "group_id",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "x-ms-visibility": "important",
+            "x-ms-summary": "Group ID",
+            "description": "ID of Group you want to select files for"
+          }
+        ]
+      }
+    },
+    "/files/{file_id}": {
+      "get": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "statusCode": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "statusCode"
+                },
+                "headers": {
+                  "type": "object",
+                  "properties": {
+                    "X-Mendeley-Trace-Id": {
+                      "type": "string",
+                      "description": "X-Mendeley-Trace-Id",
+                      "title": "",
+                      "x-ms-visibility": "internal"
+                    },
+                    "x-ms-apihub-cached-response": {
+                      "type": "string",
+                      "description": "x-ms-apihub-cached-response",
+                      "title": "",
+                      "x-ms-visibility": "internal"
+                    },
+                    "x-ms-apihub-obo": {
+                      "type": "string",
+                      "description": "x-ms-apihub-obo",
+                      "title": "",
+                      "x-ms-visibility": "internal"
+                    },
+                    "Date": {
+                      "type": "string",
+                      "description": "Date"
+                    },
+                    "Location": {
+                      "type": "string",
+                      "description": "Location"
+                    },
+                    "Content-Length": {
+                      "type": "string",
+                      "description": "Content-Length"
+                    }
+                  },
+                  "description": "headers"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Get File",
+        "operationId": "GetFile1",
+        "description": "Get file from document",
+        "x-ms-visibility": "important",
+        "parameters": [
+          {
+            "name": "file_id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "x-ms-visibility": "important",
+            "x-ms-summary": "File ID",
+            "description": "Provide ID of file to get"
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2_auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://api.mendeley.com/oauth/authorize",
+      "tokenUrl": "https://api.mendeley.com/oauth/token",
+      "scopes": {
+        "all": "all"
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2_auth": [
+        "all"
+      ]
+    }
+  ],
+  "tags": []
+}
